@@ -6,15 +6,16 @@ public class Dvd extends Produto {
     private String genero;
     private int duracao;
 
+    @Override
+    public double obterPrecoLiquido() {
+        return this.getPrecoBruto() + (this.getPrecoBruto() * 0.2);
+    }
+
     public Dvd(String titulo, int ano, String pais, double precoBruto, String diretor, String genero, int duracao) {
         super(titulo, ano, pais, precoBruto);
         this.diretor = diretor;
         this.genero = genero;
         this.duracao = duracao;
-    }
-    @Override
-    public double obterPrecoLIquido() {
-        return this.getPrecoBruto() + (this.getPrecoBruto() * 0.2);
     }
 
     public String getDiretor() {
@@ -42,7 +43,7 @@ public class Dvd extends Produto {
     }
 
     public String toString () {
-        return String.format("[Dvd] Titulo: %s, Ano: %s, Pais: %s, Preço Bruto %.2f, Preço Liquido: %.2f", getTitulo(), getAno(), getPais(), getPrecoBruto(), this.obterPrecoLIquido());
+        return String.format("[Dvd] Titulo: %s, Ano: %s, Pais: %s, Preço Bruto %.2f, Preço Liquido: %.2f", getTitulo(), getAno(), getPais(), getPrecoBruto(), this.obterPrecoLiquido());
     }
 }
 

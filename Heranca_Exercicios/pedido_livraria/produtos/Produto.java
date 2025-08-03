@@ -7,14 +7,14 @@ public abstract class Produto {
     private String pais;
     private double precoBruto;
 
+    public abstract double obterPrecoLiquido();
+
     public Produto(String titulo, int ano, String pais, double precoBruto) {
         this.titulo = titulo;
         this.ano = ano;
         this.pais = pais;
         this. precoBruto = precoBruto;
     }
-
-    public abstract double obterPrecoLIquido();
 
     public String getTitulo() {
         return titulo;

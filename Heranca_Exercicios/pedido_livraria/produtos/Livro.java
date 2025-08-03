@@ -6,16 +6,16 @@ public class Livro extends Produto {
     private String autor;
     private int edicao;
 
+    @Override
+    public double obterPrecoLiquido() {
+        return this.getPrecoBruto() + (this.getPrecoBruto() * 0.15);
+    }
+
     public Livro(String titulo, int ano, String pais, double precoBruto, int paginas, String autor, int edicao) {
         super(titulo, ano, pais, precoBruto);
         this.paginas = paginas;
         this.autor = autor;
         this.edicao = edicao;
-    }
-
-    @Override
-    public double obterPrecoLIquido() {
-        return this.getPrecoBruto() + (this.getPrecoBruto() * 0.15);
     }
 
     public int getPaginas() {
@@ -43,7 +43,7 @@ public class Livro extends Produto {
     }
 
     public String toString () {
-        return String.format("[Livro] Titulo: %s, Ano: %s, Pais: %s, Preço Bruto %.2f, Páginas: %s, Autor: %s, Edição: %s, Preço Liquido: %.2f", getTitulo(), getAno(), getPais(), getPrecoBruto(), this.paginas, this.autor, this.edicao, this.obterPrecoLIquido());
+        return String.format("[Livro] Titulo: %s, Ano: %s, Pais: %s, Preço Bruto %.2f, Páginas: %s, Autor: %s, Edição: %s, Preço Liquido: %.2f", getTitulo(), getAno(), getPais(), getPrecoBruto(), this.paginas, this.autor, this.edicao, this.obterPrecoLiquido());
     }
 }
 
