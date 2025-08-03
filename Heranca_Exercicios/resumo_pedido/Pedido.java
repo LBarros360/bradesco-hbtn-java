@@ -28,9 +28,9 @@ public class Pedido {
         System.out.println("------- RESUMO PEDIDO -------");
         for (ItemPedido i : this.itens) {
             if (i.getProduto() instanceof Livro) {
-                System.out.println(String.format("Tipo: Livro Titulo: %s Preco: %.2f Quant: %s Total: %.2f",  i.getProduto().getTitulo(), i.getProduto().obterPrecoLiquido(), i.getQuantidade(), i.getProduto().obterPrecoLiquido() * i.getQuantidade()));
+                System.out.println(String.format("Tipo: Livro  Titulo: %s  Preco: %.2f  Quant: %s  Total: %.2f",  i.getProduto().getTitulo(), i.getProduto().obterPrecoLiquido(), i.getQuantidade(), i.getProduto().obterPrecoLiquido() * i.getQuantidade()));
             } else {
-                System.out.println(String.format("Tipo: Dvd Titulo: %s Preco: %.2f Quant: %s Total: %.2f", i.getProduto().getTitulo(), i.getProduto().obterPrecoLiquido(), i.getQuantidade(), i.getProduto().obterPrecoLiquido() * i.getQuantidade()));
+                System.out.println(String.format("Tipo: Dvd  Titulo: %s  Preco: %.2f  Quant: %s  Total: %.2f", i.getProduto().getTitulo(), i.getProduto().obterPrecoLiquido(), i.getQuantidade(), i.getProduto().obterPrecoLiquido() * i.getQuantidade()));
             }
 
             totalProdutos = totalProdutos + i.getProduto().obterPrecoLiquido() * i.getQuantidade();
