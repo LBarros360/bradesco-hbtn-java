@@ -12,7 +12,7 @@ public class LivroEdicaoOuro extends Livro {
 
     @Override
     public double getPreco() {
-        return super.getPreco() * 0.3;
+        return super.getPreco() + (super.getPreco() * 0.3);
     }
 }
 
