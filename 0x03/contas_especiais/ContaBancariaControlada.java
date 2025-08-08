@@ -1,4 +1,4 @@
-public class ContaBancariaControlada extends  ContaBancariaBasica {
+public class ContaBancariaControlada extends ContaBancariaBasica {
 
     private double saldoMinimo;
     private double valorPenalidade;
