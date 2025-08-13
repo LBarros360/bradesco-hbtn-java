@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 public class CsvFileReader {
 
     public static void main(String[] args) {
-        //Path filePath = Paths.get("funcionarios.csv");
-        Path filePath = Paths.get("C:\\Projetos\\Holberton Upskilling\\File_Handling\\src\\funcionarios.csv");
+        Path filePath = Paths.get("funcionarios.csv");
+        //Path filePath = Paths.get("C:\\Projetos\\Holberton Upskilling\\File_Handling\\src\\funcionarios.csv");
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath.toString()))) {
 
