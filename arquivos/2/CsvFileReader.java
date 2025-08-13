@@ -1,5 +1,3 @@
-import entities.Products;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -14,8 +12,6 @@ public class CsvFileReader {
 
         Path filePath = Paths.get("funcionarios.csv");
         //Path filePath = Paths.get("C:\\Projetos\\Holberton Upskilling\\File_Handling\\src\\funcionarios.csv");
-
-        List<Products> list = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath.toString()))){
             String line = br.readLine();
