@@ -16,14 +16,17 @@ public class FileWritingExercise {
         //File file = new File(path);
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
-            do {
+            while (true) {
                 texto = scanner.nextLine();
-                if (!texto.equalsIgnoreCase("sair")) {
+                if (texto.equalsIgnoreCase("sair")) {
+                    break;
+
+                } else {
                     bw.write(texto);
                     bw.write("\n");
                 }
 
-            } while (!texto.equalsIgnoreCase("sair"));
+            }
 
             System.out.printf("O arquivo \s foi salvo com sucesso!", fileName);
         } catch (IOException e) {
