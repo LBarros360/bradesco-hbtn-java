@@ -13,6 +13,8 @@ public class FileReadingExercise {
             String texto;
             texto = reader.readLine();
 
+            System.out.println("Conteúdo do arquivo 'exemplo.txt':\n");
+
             while (texto != null) {
                 System.out.println(texto);
                 texto = reader.readLine();
