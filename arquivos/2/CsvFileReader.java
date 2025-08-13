@@ -34,7 +34,7 @@ public class CsvFileReader {
     }
 
     public static void imprimeLinha(String nome, String idade, String departamento, String salarial) {
-        System.out.println("Nome: " + nome);
+        System.out.println("Funcionario: " + nome);
         System.out.println("Idade: " + idade);
         System.out.println("Departamento: " + departamento);
         System.out.println("Salarial: " + salarial);
