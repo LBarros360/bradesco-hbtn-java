@@ -57,14 +57,13 @@ public class Estoque {
             while (iterator.hasNext()) {
                 if (iterator.next().getId() == idExcluir) {
                     iterator.remove();
-                    System.out.println("###Linha Removida: ");
+                    //System.out.println("###Linha Removida: ");
                     break;
                 }
             }
 
 
             gravarArquivo(produtosLista);
-            exibirEstoque();
 
 
             //System.out.println("Produto de id: " + idExcluir + "excluido com sucesso");
@@ -104,13 +103,12 @@ public class Estoque {
             for (Produto p : produtosLista ) {
                 if (p.getId() == idAtualizar) {
                     p.setQuantidade(novaQuantidade);
-                    System.out.println("###Quantidade atualizada: ");
+                    //System.out.println("###Quantidade atualizada: ");
                     break;
                 }
             }
 
             gravarArquivo(produtosLista);
-            exibirEstoque();
         }
     }
 
@@ -163,7 +161,7 @@ public class Estoque {
                 bw.write("\n");
             }
 
-            System.out.println("O arquivo foi salvo com sucesso!");
+            //System.out.println("O arquivo foi salvo com sucesso!");
 
         } catch (IOException e) {
             System.out.println("Erro: " + e.getMessage());
