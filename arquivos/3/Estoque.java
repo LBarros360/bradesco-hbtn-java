@@ -64,7 +64,7 @@ public class Estoque {
 
 
             gravarArquivo(produtosLista);
-            exibirEstoque(this.arquivo);
+            exibirEstoque();
 
 
             //System.out.println("Produto de id: " + idExcluir + "excluido com sucesso");
@@ -76,9 +76,8 @@ public class Estoque {
 
     /**
      * Imprime o conteudo do arquivo
-     * @param arquivo
-     */
-    public void exibirEstoque(String arquivo) {
+     *      */
+    public void exibirEstoque() {
         List<Produto> produtosLista = new ArrayList<>();
         //Local
         //produtosLista = lerArquivo(this.filePath + "/" + arquivo);
@@ -111,7 +110,7 @@ public class Estoque {
             }
 
             gravarArquivo(produtosLista);
-            exibirEstoque(this.arquivo);
+            exibirEstoque();
         }
     }
 

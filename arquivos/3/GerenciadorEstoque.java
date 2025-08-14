@@ -49,7 +49,7 @@ public class GerenciadorEstoque {
                     }
                 case 3:
                     System.out.println("Estoques:");
-                    estoque.exibirEstoque(estoque.getArquivo());
+                    estoque.exibirEstoque();
                     break;
                 case 4:
                     try {
