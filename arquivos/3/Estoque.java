@@ -33,7 +33,7 @@ public class Estoque {
         //Local
         //produtos = lerArquivo(this.filePath + "/estoque.csv");
 
-        idDisponivel = produtos.size() + 1;
+        idDisponivel = produtos.get(produtos.size() - 1).getId() + 1;
         Produto produto = new Produto(idDisponivel, nome, quantidade, preco);
         produtos.add(produto);
 
