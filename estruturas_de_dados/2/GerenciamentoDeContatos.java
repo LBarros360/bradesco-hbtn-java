@@ -14,10 +14,16 @@ public class GerenciamentoDeContatos {
 
     // Adiciona um novo contato
     public void adicionarContato(String nome, String telefone, String email) {
-        Contato contato = new Contato();
-        contato.adicionarTelefone(telefone);
-        contato.adicionarEmail(email);
-        this.contatos.put(nome, contato);
+        if (!this.contatos.containsKey(nome)) {
+            Contato contato = new Contato();
+            contato.adicionarTelefone(telefone);
+            contato.adicionarEmail(email);
+            this.contatos.put(nome, contato);
+            System.out.println("Contato " + nome + " adicionado com sucesso!");
+        } else {
+            System.out.println("Erro: Contato com nome " + nome + " já existe!");
+        }
+
     }
 
 
