@@ -1,22 +1,22 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Biblioteca<T> {
+public class Biblioteca<T extends Midia> {
 
-    private List<Midia> lista;
+    private List<T> lista;
 
     public Biblioteca() {
         this.lista = new ArrayList<>();
     }
 
 
-
-    public List<Midia> obterListaMidias() {
+    public List<T> obterListaMidias() {
         return this.lista;
     }
 
-    public void adicionarMidia(Midia item) {
+    public void adicionarMidia(T item) {
         this.lista.add(item);
     }
 }
+
 
