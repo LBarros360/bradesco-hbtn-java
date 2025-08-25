@@ -2,20 +2,20 @@ import java.util.Locale;
 
 public class Eletronico {
 
-    private String nome;
+    private String descricao;
     private double valor;
 
-    public Eletronico(String nome, double valor) {
-        this.nome = nome;
+    public Eletronico(String descricao, double valor) {
+        this.descricao = descricao;
         this.valor = valor;
     }
 
-    public String getNome() {
-        return nome;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public double getValor() {
@@ -28,7 +28,8 @@ public class Eletronico {
 
     @Override
     public String toString() {
-        return String.format("[" +this.nome+ "] R$ %.6f", this.valor);
+        return String.format("[" +this.descricao+ "] R$ %.6f", this.valor);
     }
 }
+
 
