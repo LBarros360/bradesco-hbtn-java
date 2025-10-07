@@ -46,7 +46,7 @@ public class Produto {
 
     @Override
     public String toString() {
-       return "[" + codigo+ "] " + nome + " " + categoria + " R$ " + String.format("%.2f", preco);
+       return "[" + codigo+ "] " + nome + " " + categoria + " R$ " + String.format("%,2f", preco);
     }
 }
 
