@@ -52,7 +52,7 @@ public class Produto {
 
     @Override
     public String toString() {
-       return "[" + codigo+ "] " + nome + " " + categoria + " R$ " + valorMonetario.format(preco);
+       return "[" + codigo+ "] " + nome + " " + categoria + " " + valorMonetario.format(preco);
     }
 }
-   
+
