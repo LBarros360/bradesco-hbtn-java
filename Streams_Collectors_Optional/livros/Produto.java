@@ -1,10 +1,4 @@
-import java.text.NumberFormat;
-import java.util.Locale;
-
 public class Produto {
-
-    Locale localeBR = new Locale("pt","BR");
-    NumberFormat valorMonetario = NumberFormat.getCurrencyInstance(localeBR);
 
     private int codigo;
     private String nome;
@@ -52,7 +46,7 @@ public class Produto {
 
     @Override
     public String toString() {
-       return "[" + codigo+ "] " + nome + " " + categoria + " " + valorMonetario.format(preco);
+        return String.format(new java.util.Locale("pt", "BR"), "[%d] %s %s R$ %.2f", codigo, nome, categoria, preco);
     }
 }
 
