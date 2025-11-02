@@ -19,15 +19,15 @@ public class Consumidor extends Thread {
         }
     }
 
-    @Override
-    public void start() {
-        try {
-            for (int i = 1; i <= 5; i++) {
-                buffer.consumir();  // O consumidor retira os itens do buffer
-                Thread.sleep(1500);  // Simula o tempo para consumir um item
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
+
+
+
+
+
+
+
+
+
+
+  
 }
