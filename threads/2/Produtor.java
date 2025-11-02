@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Produtor extends Thread {
 
 
@@ -12,9 +14,10 @@ public class Produtor extends Thread {
     @Override
     public void run() {
         while(true){
-            int randon = (int)(Math.random() * 100);
-            fila.adicionar(randon);
-            System.out.println("Produtor " + id + " produziu: " + randon);
+            Random random = new Random();
+            int produto = random.nextInt(101);
+            fila.adicionar(produto);
+            System.out.println("Produtor " + id + " produziu: " + produto);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
